@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Apply modern typography */
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Gradient Background for the main app */
+.stApp {
+    background: linear-gradient(135deg, #1e1e2f 0%, #2a2a40 100%);
+    color: #ffffff;
+}
+
+/* Sidebar styling - Glassmorphism */
+section[data-testid="stSidebar"] {
+    background: rgba(30, 30, 47, 0.6) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+/* Primary Button Styling */
+.stButton > button {
+    background: linear-gradient(90deg, #6366f1, #a855f7);
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 10px 24px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.stButton > button:hover {
+    background: linear-gradient(90deg, #4f46e5, #9333ea);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+    transform: scale(1.02);
+}
+
+/* Input Fields */
+.stTextInput > div > div > input,
+.stTextArea > div > div > textarea,
+.stSelectbox > div > div > div {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px !important;
+}
+
+.stTextInput > div > div > input:focus,
+.stTextArea > div > div > textarea:focus {
+    border-color: #6366f1 !important;
+    box-shadow: 0 0 0 1px #6366f1 !important;
+}
+
+/* Skill Chips */
+.skill-chip {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 4px;
+    border-radius: 20px;
+    background: rgba(99, 102, 241, 0.2);
+    border: 1px solid rgba(99, 102, 241, 0.4);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #e0e7ff;
+    transition: all 0.2s ease;
+}
+
+.skill-chip:hover {
+    background: rgba(99, 102, 241, 0.4);
+    transform: translateY(-2px);
+}
+
+/* File Uploader */
+.stFileUploader > div {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 2px dashed rgba(255, 255, 255, 0.2) !important;
+    border-radius: 12px !important;
+    transition: all 0.3s ease;
+}
+
+.stFileUploader > div:hover {
+    border-color: #a855f7 !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Hide default streamlit menu for a cleaner app look */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
